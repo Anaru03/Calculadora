@@ -1,5 +1,7 @@
+"use client";
+
 import React from 'react';
-import Display from './Display';
+import Display from '@/components/Display';
 import Keyboard from '@/components/Keyboard';
 
 const Calculator = () => {
