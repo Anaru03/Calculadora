@@ -2,3 +2,29 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+  .calculator{
+    @apply text-white bg-stone-900 w-80 mx-auto mt-10 p-4 rounded-lg shadow-lg;
+  }
+
+  .input{
+    @apply py-4 px-5 bg-transparent text-white text-2xl text-right w-full;
+  }
+
+  .buttons{
+    @apply grid grid-cols-4 gap-2 mt-4;
+  }
+  
+  button{
+    @apply transition duration-300 active:translate-x-1 text-xl;
+  }
+
+  .number{
+    @apply bg-slate-300 text-black rounded-lg p-2;
+  }
+
+  .operator{
+    @apply bg-orange-500 text-white rounded-lg p-2;
+  }
+
+}
