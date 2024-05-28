@@ -10,9 +10,19 @@ function App() {
   
   const calculate = () => {
     try {
-      setResult(eval(result).toString());
+      const expression = result;
+      const regex = /[0-9+/*-.]+/g;
+      const validExpression = expression.match(regex);
+      
+      if (!validExpression || validExpression.join('') !== expression) {
+        setResult('Error');
+        return;
+      }
+
+      const resultValue = eval(expression);
+      setResult(resultValue.toString());
     } catch (error) {
-      setResult("Error");
+      setResult('Error');
     }
   }
 
